@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1531540767300.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2271674313",
+    "id" : "C96D316E",
+    "lastKnownWriteTime" : 1531547285,
+    "last_content_update" : 1531547285295,
+    "path" : "C:/Users/Administrator/rlangweekend/Project180707/rspGame.R",
+    "project_path" : "rspGame.R",
+    "properties" : {
+        "cursorPosition" : "28,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

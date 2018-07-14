@@ -117,21 +117,42 @@ getSex("800101-3")
 # 이김
 
 
-rspGame <- function(x, y){
+rspGame <- function(){
+  x <- sample(1:3,1,replace = TRUE)
+  y <- sample(1:3,1,replace = TRUE)
   return(cat(x,
              " VS ",
              y,
              " --> ",
-             res <- if(x > y) "왼쪽이 이김" else
-                    if(x == y) "비김" else
-                    if(x < y) "오른쪽이 이김" else
+             res <- if(x-y == 1 || x-y == -2) "X가 이김" else
+                    if(x-y == 0) "비김" else
+                    if(x-y == -1 || x-y == 2) "Y가 이김" else
                       "Error"
-            )
         )
+  )
 }
 
-comVal <- sample(1:3,1,replace = TRUE)
-myVal <- sample(1:3,1,replace = TRUE)
-rspGame(comVal, myVal)
+
+rspGame <- function(){
+  x <- sample(1:3,1,replace = TRUE)
+  y <- sample(1:3,1,replace = TRUE)
+  return(if(x-y == 1 || x-y == -2) "X가 이김" else
+        if(x-y == 0) "비김" else
+        if(x-y == -1 || x-y == 2) "Y가 이김" else
+         "Error"
+  )
+}
+
+rspGame <- function(x){
+  return(switch(toString(sample(1:3,1,replace = TRUE)-x),
+                '0' = 'TIE',
+                '1' = 'WIN',
+                '2' = 'WIN',
+                '-1' = 'LOSE',
+                '2' = 'LOSE')
+  )
+}
+
+rspGame(3)
 
 
