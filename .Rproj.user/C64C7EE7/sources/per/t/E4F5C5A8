@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1531534110077.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2162620108",
+    "id" : "E4F5C5A8",
+    "lastKnownWriteTime" : 1531534120,
+    "last_content_update" : 1531534120091,
+    "path" : "C:/Users/Administrator/rlangweekend/Project180707/homework_1.R",
+    "project_path" : "homework_1.R",
+    "properties" : {
+        "cursorPosition" : "131,3",
+        "scrollLine" : "108",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

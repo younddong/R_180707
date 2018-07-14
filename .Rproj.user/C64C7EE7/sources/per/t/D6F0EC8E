@@ -1,22 +1,19 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1530762448884.000,
+    "created" : 1531534399159.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "1878695655",
-    "id" : "18C539C6",
+    "id" : "D6F0EC8E",
     "lastKnownWriteTime" : 1530782989,
     "last_content_update" : 1530782989,
-    "path" : "C:/Users/Administrator/rlangweekend/Project180707/calc.R",
-    "project_path" : "calc.R",
+    "path" : "C:/Users/Administrator/rlangweekend/Project180707/1week.R",
+    "project_path" : "1week.R",
     "properties" : {
-        "cursorPosition" : "282,38",
-        "scrollLine" : "201",
-        "tempName" : "Untitled1"
     },
-    "relative_order" : 1,
+    "relative_order" : 3,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_source"
