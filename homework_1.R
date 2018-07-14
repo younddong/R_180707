@@ -14,9 +14,9 @@
 
 
 ##############################
-# #
-# Homework 1 #
-# #
+#                            #
+# Homework 1                 #
+#                            #
 ##############################
 ## 월요일 문제
 # 체질량 지수(體質量指數, Body Mass Index, BMI)는 인간의 비만도를 나타내는 지수로,
@@ -29,43 +29,31 @@
 # 이 문제는 스위치버전은 구할수 없고 if-else 버전만 가능합니다.
 
 getBmi <- function(t, w){
-  t <- t/100
-  t <- t*t
-  bmi <- w/t
-  if(bmi >= 35) res <- cat("고도 비만") else
-    if(bmi >= 30) res <- cat("중등도 비만") else
-      if(bmi >= 25) res <- cat("경도 비만") else
-        if(bmi >= 23) res <- cat("과체중") else
-          if(bmi >= 18.5) res <- cat("정상") else
-            if(bmi < 18.5 ) res <- cat("저체중") else
-              return(res)
-}
-
-
-getBmi <- function(t, w){
-  t <- t/100
-  t <- t*t
-  bmi <- w/t
-  return(cat(res <- if(bmi >= 35) res <- cat("고도 비만") else
-    if(bmi >= 30) res <- cat("중등도 비만") else
-      if(bmi >= 25) res <- cat("경도 비만") else
-        if(bmi >= 23) res <- cat("과체중") else
-          if(bmi >= 18.5) res <- cat("정상") else
-            if(bmi < 18.5 ) res <- cat("저체중") else
-              "Error"
-  )
+  bmi <- w / ((t*t) / 10000)
+  return(cat(res <- if(bmi >= 35) "고도 비만" else
+                    if(bmi >= 30 & bmi < 35) "중등도 비만" else
+                    if(bmi >= 25 & bmi < 30) "경도 비만" else
+                    if(bmi >= 23 & bmi < 24.9) "과체중" else
+                    if(bmi >= 18.5 & bmi < 22.9) "정상" else
+                     "저체중"
+            ) 
   )
 }
 
+# bmi 값에 대해서 한번에 계산 가능
+# bmi <- w/((t*t)/10000)
 
-getBmi(178, 85)
+getBmi(160.6, 50)
+
+
+
 
 
 
 ##############################
-# #
-# Homework 2 #
-# #
+#                            #
+# Homework 2                 #
+#                            #
 ##############################
 ## 화요일 문제
 ## 문자열에서 필요한 값 추출하기
@@ -83,28 +71,38 @@ sub
 
 
 getSex <- function(jumin){
+  return(switch(substr(jumin, 8, 8),
+                '1' = "남",
+                '2' = "여",
+                '3' = "남",
+                '4' = "여",
+                '5' = "외",
+                '6' = "외",
+                 "잘못 입력하셨습니다."
+               )
+        )
+}
+
+getSex <- function(jumin){
   sex <- substr(jumin, 8, 8)
-  return(cat(res <- switch(
-    sex,
-    '1' = "남",
-    '2' = "여",
-    '3' = "남",
-    '4' = "여",
-    '5' = "외",
-    '6' = "외",
-    "잘못 입력하셨습니다."
-  )
-  )
+  return(res <- if(sex == '1' || sex == '3') "남" else
+                if(sex == '2' || sex == '4') "여" else
+                if(sex == '5' || sex == '6') "외" else
+                  "잘못 입력하셨습니다."
   )
 }
 
-getSex("800101-5")
+getSex("800101-3")
+
+
+
+
 
 
 ##############################
-# #
-# Homework 3 #
-# #
+#                            #
+# Homework 3                 #
+#                            #
 ##############################
 ## 수요일 문제
 # sample(1:3,1,replace = TRUE) 하면 1부터 3까지 중에서 랜덤숫자
@@ -119,21 +117,21 @@ getSex("800101-5")
 # 이김
 
 
-rsp <- function(x, y){
+rspGame <- function(x, y){
   return(cat(x,
              " VS ",
              y,
              " --> ",
              res <- if(x > y) "왼쪽이 이김" else
-               if(x == y) "비김" else
-                 if(x < y) "오른쪽이 이김" else
-                   "Error"
-  )
-  )
+                    if(x == y) "비김" else
+                    if(x < y) "오른쪽이 이김" else
+                      "Error"
+            )
+        )
 }
 
 comVal <- sample(1:3,1,replace = TRUE)
 myVal <- sample(1:3,1,replace = TRUE)
-rsp(comVal, myVal)
+rspGame(comVal, myVal)
 
 
