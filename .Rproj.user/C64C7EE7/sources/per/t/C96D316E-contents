@@ -11,17 +11,12 @@
 
 
 rspGame <- function(){
-  x <- sample(1:3,1,replace = TRUE)
-  y <- sample(1:3,1,replace = TRUE)
-  return(cat(x,
-             " VS ",
-             y,
-             " --> ",
-             res <- if(x-y == 1 || x-y == -2) "X가 이김" else
-                    if(x-y == 0) "비김" else
-                    if(x-y == -1 || x-y == 2) "Y가 이김" else
-                      "Error"
-  )
+  return(switch(toString(sample(1:3,1,replace = TRUE)-sample(1:3,1,replace = TRUE)),
+         '0' = 'TIE',
+         '1' = 'WIN',
+         '2' = 'WIN',
+         '-1' = 'LOSE',
+         '-2' = 'LOSE')
   )
 }
 

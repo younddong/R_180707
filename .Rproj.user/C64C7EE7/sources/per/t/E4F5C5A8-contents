@@ -144,13 +144,14 @@ rspGame <- function(){
 }
 
 rspGame <- function(x){
-  return(switch(toString(sample(1:3,1,replace = TRUE)-x),
+  num <- sample(1:3,1,replace = TRUE)
+  return(cat(num, " VS ", x, ' => ', res <- switch(toString(num-x),
                 '0' = 'TIE',
                 '1' = 'WIN',
                 '2' = 'WIN',
                 '-1' = 'LOSE',
-                '2' = 'LOSE')
-  )
+                '-2' = 'LOSE')
+  ))
 }
 
 rspGame(3)
